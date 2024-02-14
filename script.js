@@ -61,10 +61,14 @@ hiddenElement.forEach((el) => {
 document.addEventListener("DOMContentLoaded", () => {
   const icon = document.getElementById("icon");
   const body = document.body;
-  const isDarkMode = localStorage.getItem("darkMode") === "true";
+  const isDarkMode = localStorage.getItem("darkMode") === "false";
+  // Check if the user prefers dark mode
+  const prefersDarkMode =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
   // Set initial dark mode state and update icon
-  body.classList.toggle("dark", isDarkMode);
-  updateIcon(isDarkMode);
+  body.classList.toggle("dark", isDarkMode || prefersDarkMode);
+  updateIcon(isDarkMode || prefersDarkMode);
   icon.addEventListener("click", (event) => {
     event.preventDefault();
     body.classList.toggle("dark");
