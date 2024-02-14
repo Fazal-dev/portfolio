@@ -377,9 +377,14 @@ main {
 .contact-form input:focus {
   outline: none;
 }
-.contact-form input ::placeholder {
-  color: var(--textColor);
+
+.contact-form input::placeholder {
+  color: var(--textColor) !important;
 }
+.contact-form textarea ::placeholder {
+  color: var(--textColor) !important;
+}
+
 .contact-form .form-control input,
 textarea ::placeholder {
   color: var(--textColor) !important;
@@ -387,7 +392,7 @@ textarea ::placeholder {
 .contact-form input,
 textarea::placeholder {
   text-transform: capitalize !important;
-  color: var(--textColor);
+  color: var(--textColor) !important;
 }
 .contact-form input,
 textarea {
