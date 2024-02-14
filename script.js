@@ -41,21 +41,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // animation when scroll down
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-      observer.unobserve(entry.target);
-    } else {
-      entry.target.classList.remove("show");
-    }
-  });
-});
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       entry.target.classList.add("show");
+//       observer.unobserve(entry.target);
+//     } else {
+//       entry.target.classList.remove("show");
+//     }
+//   });
+// });
 
-const hiddenElement = document.querySelectorAll(".hidden-1");
-hiddenElement.forEach((el) => {
-  observer.observe(el);
-});
+// const hiddenElement = document.querySelectorAll(".hidden-1");
+// hiddenElement.forEach((el) => {
+//   observer.observe(el);
+// });
 
 // dark mode toggle
 document.addEventListener("DOMContentLoaded", () => {
